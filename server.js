@@ -33,6 +33,9 @@ app.use("/styles", sass({
   debug: true,
   outputStyle: 'expanded'
 }));
+
+const db = []
+
 app.use(express.static("public"));
 
 // Mount all resource routes
@@ -40,8 +43,26 @@ app.use("/api/users", usersRoutes(knex));
 
 // Home page
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render(db);
 });
+
+app.post("/",(req,res)=>{
+  // get user input
+  const title = req.body.text;
+
+  // create a todo item
+  const newTodo = {
+    title,
+    type: "movies",
+    status: 'active',
+    createdAt: Date.now()
+  }
+  
+  // add to database
+  db.push(newTodo);
+
+  res.send(newTodo);
+})
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
