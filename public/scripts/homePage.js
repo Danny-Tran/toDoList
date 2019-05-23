@@ -7,7 +7,7 @@ function homePage(){
                 <textarea placeholder="Add something to Check Out!"
                     name="text"></textarea>
                 <div class="addCheckItFooter">
-                    <input type="submit" 
+                    <input class="checkIt" type="submit" 
                         value="checkIt">
                 </div>
             </form>
