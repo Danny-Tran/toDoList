@@ -1,0 +1,20 @@
+@import '_variables.scss';
+
+.jumbotron-fluid {
+    background-color: $primaryColor;
+    display: flex;
+    align-content: space-between;
+    padding: 0 1em;
+    margin-bottom: 0;
+    .container{
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+    }
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

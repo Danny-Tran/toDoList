@@ -1,0 +1,32 @@
+.nav-link {
+  color: black;
+}
+
+.nav.nav-tabs {
+  background-color: aliceblue;
+}
+
+.nav-item #watch {
+  background-color: #EAD923;
+}
+
+.nav-item.watch, .tab-content #watch {
+  background-color: #EAD923;
+}
+
+.nav-item.resto, .tab-content #resto {
+  background-color: #9BC53D;
+}
+
+.nav-item.book, .tab-content #book {
+  background-color: #c214c2;
+}
+
+.nav-item.product, .tab-content #product {
+  background-color: #e90a0a;
+}
+
+.nav-item.misc, .tab-content #misc {
+  background-color: #5BC0EB;
+}
+/*# sourceMappingURL=list.css.map */
