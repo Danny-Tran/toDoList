@@ -5,7 +5,7 @@ const pg = require ("pg")
 const client = new pg.Client({
   user     : process.env.DB_USER,
   password : process.env.DB_PASS,
-  db : process.env.DB_NAME,
+  db       : process.env.DB_NAME,
   host     : process.env.DB_HOST,
 })
 client.connect((err)=>{
