@@ -30,8 +30,9 @@
     <body>
             <!-- Jumbo -->
         <div class="jumbotron jumbotron-fluid">
+            <img class="logo" src="images/logo.png" width="90px" height="90px"> 
             <div class="container">
-                <h1>Welcome to Check It</h1>      
+                <h1>Welcome to Check It</h1>    
                 <p>...check it and come back later</p>
             </div>
             <p class="user">Hello Friend!</p>
@@ -39,6 +40,28 @@
         </div>
         <main id="page">
             <!-- homePage -->
+            <section class="addCheckIt">
+                    <form id="addToDo" action="/" method="POST">
+                        <div class="input-group mt-3 mb-3">
+                            <div class="input-group-prepend">
+                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                                </button>
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Watch</a>
+                                <a class="dropdown-item" href="#">Eat</a>
+                                <a class="dropdown-item" href="#">Read</a>
+                                <a class="dropdown-item" href="#">Buy</a>
+                                <a class="dropdown-item" href="#">Misc</a>
+                            </div>
+                            <textarea placeholder="Add something to Check Out!"
+                                name="text"></textarea>
+                        </div>
+                        <div class="addCheckItFooter">
+                            <input class="checkIt" type="submit" 
+                                value="checkIt">
+                        </div>
+                    </form>
+                </section>
         </main>
         <ul class="nav nav-tabs">
             <li class="nav-item">

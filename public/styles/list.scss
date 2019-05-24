@@ -2,13 +2,20 @@
 
 .nav-link{
     color: black;
+    border: .5px solid black;
 }
 .nav.nav-tabs{
     background-color: aliceblue;
 }
-.nav-item #watch{
-    background-color: $supportColor1;
+
+.tab-content>.active  {
+    height: 15em;
+    margin: 0;
 }
+
+// .nav-item #watch{
+//     background-color: $supportColor1;
+// }
 .nav-item.watch, .tab-content #watch {
     background-color: $supportColor1;
 }

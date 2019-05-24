@@ -94,8 +94,13 @@ function restoFormSubmit() {
 
 
 $(document).ready(function(){
+<<<<<<< HEAD
 homePage();
 
+=======
+  // homePage();
+  handleFormSubmit();
+>>>>>>> master
 })
 
 
