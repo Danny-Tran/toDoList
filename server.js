@@ -59,23 +59,23 @@ app.get("/", (req, res) => {
   res.render(db);
 });
 
-app.post("/",(req,res)=>{
-  // get user input
-  const title = req.body.text;
+// app.post("/",(req,res)=>{
+//   // get user input
+//   const title = req.body.text;
 
   // create a todo item
-  const newTodo = {
-    title,
-    type: "movies",
-    status: 'active',
-    createdAt: Date.now()
-  }
+//   const newTodo = {
+//     title,
+//     type: "movies",
+//     status: 'active',
+//     createdAt: Date.now()
+//   }
   
-  // add to database
-  db.push(newTodo);
+//   // add to database
+//   db.push(newTodo);
 
-  res.send(newTodo);
-})
+//   res.send(newTodo);
+// })
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

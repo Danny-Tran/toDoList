@@ -46,13 +46,12 @@
                             <div class="input-group-prepend">
                             <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
                                 </button>
-                                <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Watch</a>
-                                <a class="dropdown-item" href="#">Eat</a>
-                                <a class="dropdown-item" href="#">Read</a>
-                                <a class="dropdown-item" href="#">Buy</a>
-                                <a class="dropdown-item" href="#">Misc</a>
-                            </div>
+                                <select class="checkIt" name="activities">
+                                        <option id="resto" value="resto">What to eat</option>
+                                        <option id="book" value="books">What to read</option>
+                                        <option id="movie" value="movies">What to watch</option>
+                                        <option id="product" value="products">What to buy</option>
+                                </select>
                             <textarea placeholder="Add something to Check Out!"
                                 name="text"></textarea>
                         </div>
@@ -90,7 +89,7 @@
                 <H1>I really gotta check out...</H1>
             </div>
             <div class="tab-pane container fade" id="watch">
-                    <ul>
+                    <ul id="watch-items">
                             <li>Bohemian Rhapsody</li>
                             <li>Detective Pikachu</li>
                             <li>Bob's Burgers</li>
@@ -98,28 +97,28 @@
                     </ul>
                 </div>
             <div class="tab-pane container fade" id="resto">
-                <ul>
+                <ul id="eat-items">
                     <li>Ogam chicken</li>
                     <li>El Furniture Warehouse</li>
                     <li>Mina's Brazillian</li>
                 </ul>
             </div>
             <div class="tab-pane container fade" id="book">
-                <ul>
+                <ul id="read-items">
                     <li>Neil Gaiman - American Gods</li>
                     <li>George Orwell - 1984</li>
                     <li>Ernest Cline - Ready Player One</li>
                 </ul>
             </div>
             <div class="tab-pane container fade" id="product">
-                <ul>
+                <ul id="buy-items">
                     <li>Red Head Socks</li>
                     <li>Live Clean Shampoo</li>
                     <li>Sham Wow</li>
                 </ul>
             </div>
             <div class="tab-pane container fade" id="misc">
-                    <ul>
+                    <ul id="misc-items">
                         <li>Lighthouse Labs</li>
                         <li>Sonic Feild Day</li>
                     </ul>
