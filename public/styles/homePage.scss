@@ -6,10 +6,11 @@ section.addCheckIt {
     align-items: center;
     width: 100%;
     margin: 1em;
-    padding: 10px;
     border: 1px solid black;
     border-radius: 100px;
     background-color: #f0e9e999;
+    z-index: 3;
+    box-shadow: 0px 0px 95px -19px rgba(0,0,0,0.46);
     
     form#addToDo {
         display: flex;
@@ -21,13 +22,11 @@ section.addCheckIt {
         }
         
         textarea{
-        justify-content: center;
         width: 150%;
         }
         .addCheckItFooter {
             display: flex;
             justify-content: center;
-            padding: 10px 0 0;
             width: 100%;
         }
         .checkIt {

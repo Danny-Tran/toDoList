@@ -1,32 +1,55 @@
 section.addCheckIt {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  width: 550px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   margin: 1em;
-  flex-direction: column;
   padding: 10px;
-  border: 2px solid black;
-  border-radius: 21px;
+  border: 1px solid black;
+  border-radius: 100px;
   background-color: #f0e9e999;
 }
 
 section.addCheckIt form#addToDo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+section.addCheckIt form#addToDo .input-group {
+  display: block;
 }
 
 section.addCheckIt form#addToDo textarea {
-  justify-content: center;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150%;
 }
 
 section.addCheckIt form#addToDo .addCheckItFooter {
-  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0 0;
   width: 100%;
 }
 
-.checkIt {
+section.addCheckIt form#addToDo .checkIt {
   border-radius: 4px;
   width: 100px;
 }
+/*# sourceMappingURL=homePage.css.map */
