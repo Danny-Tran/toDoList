@@ -3,9 +3,8 @@
 section.addCheckIt {
     display: flex;
     align-items: center;
-    width: 550px;
+    width: 100%;
     margin: 1em;
-    flex-direction: column;
     padding: 10px;
     border: 2px solid black;
     border-radius: 21px;
@@ -14,21 +13,22 @@ section.addCheckIt {
     form#addToDo {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        
-        textarea{
-        
-        justify-content: center;
         width: 100%;
+        
+        button{
+            $primaryColor;
+        }
+        textarea{
+        justify-content: center;
+        width: 150%;
         }
         .addCheckItFooter {
             padding: 10px 0;
             width: 100%;
         }
+        .checkIt {
+            border-radius: 4px;
+            width: 100px;
+        }
     }
-}
-
-.checkIt {
-    border-radius: 4px;
-    width: 100px;
 }

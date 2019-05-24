@@ -1,8 +1,13 @@
 @import '_variables.scss';
 
+.logo {
+    width: 20%;
+    height: 20%;
+}
 .jumbotron-fluid {
     background-color: $primaryColor;
     display: flex;
+    flex-wrap: wrap;    
     align-content: space-between;
     padding: 0 1em;
     margin-bottom: 0;

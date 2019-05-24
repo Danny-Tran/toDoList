@@ -6,6 +6,14 @@
 .nav.nav-tabs{
     background-color: aliceblue;
 }
+// .tab-content{
+//     height: 25em;
+// }
+
+.tab-content>.active  {
+    height: 25em;
+}
+
 .nav-item #watch{
     background-color: $supportColor1;
 }

@@ -5,12 +5,8 @@ section.addCheckIt {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 550px;
+  width: 100%;
   margin: 1em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding: 10px;
   border: 2px solid black;
   border-radius: 21px;
@@ -24,17 +20,14 @@ section.addCheckIt form#addToDo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  width: 100%;
 }
 
 section.addCheckIt form#addToDo textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 150%;
 }
 
 section.addCheckIt form#addToDo .addCheckItFooter {
@@ -42,7 +35,7 @@ section.addCheckIt form#addToDo .addCheckItFooter {
   width: 100%;
 }
 
-.checkIt {
+section.addCheckIt form#addToDo .checkIt {
   border-radius: 4px;
   width: 100px;
 }
