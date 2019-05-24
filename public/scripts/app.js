@@ -11,6 +11,16 @@
 //   });;
 // });
 
+//   $.ajax({
+//     method: "GET",
+//     url: "/api/users"
+//   }).done((users) => {
+//     for(user of users) {
+//       $("<div>").text(user.name).appendTo($("body"));
+//     }
+//   });;
+// });
+
 //Movie GET
 function movieFormSubmit() {
   const movieButton = $('#submitform');
@@ -68,14 +78,15 @@ $(document).ready(function(){
   // movieFormSubmit()
   restoFormSubmit();
   homePage();
+  handleFormSubmit();
 })
 
 
 
 
-app.listen(PORT, () => {
-  console.log("Example app listening on port " + PORT);
-});
+// app.listen(PORT, () => {
+//   console.log("Example app listening on port " + PORT);
+// });
 
 // https://cse.google.com/cse?cx=017873622156579969207:tayz2vdgawe
 
