@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS chores CASCADE;
+
+CREATE TABLE chores(
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(100),
+    category VARCHAR(50)
+);
