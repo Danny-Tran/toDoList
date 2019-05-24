@@ -1,6 +1,19 @@
 "use strict";
 
 require('dotenv').config();
+const pg = require ("pg")
+const client = new pg.Client({
+  user     : process.env.DB_USER,
+  password : process.env.DB_PASS,
+  db : process.env.DB_NAME,
+  host     : process.env.DB_HOST,
+})
+client.connect((err)=>{
+  if (err) {
+    return console.error("Connection Error", err);
+  }
+})
+ 
 
 const PORT        = process.env.PORT || 8080;
 const ENV         = process.env.ENV || "development";
