@@ -1,15 +1,15 @@
-$(() => {
-  homePage()
+// $(() => {
+//   homePage()
 
-  $.ajax({
-    method: "GET",
-    url: "/api/users"
-  }).done((users) => {
-    for(user of users) {
-      $("<div>").text(user.name).appendTo($("body"));
-    }
-  });;
-});
+//   $.ajax({
+//     method: "GET",
+//     url: "/api/users"
+//   }).done((users) => {
+//     for(user of users) {
+//       $("<div>").text(user.name).appendTo($("body"));
+//     }
+//   });;
+// });
 
 
 function handleFormSubmit() {
@@ -30,14 +30,14 @@ function handleFormSubmit() {
 }
 
 $(document).ready(function(){
-  handleFormSubmit();
   homePage();
+  handleFormSubmit();
 })
 
 
 
 
-app.listen(PORT, () => {
-  console.log("Example app listening on port " + PORT);
-});
+// app.listen(PORT, () => {
+//   console.log("Example app listening on port " + PORT);
+// });
 

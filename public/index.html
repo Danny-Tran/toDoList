@@ -7,11 +7,12 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap" >
-    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">    
     <!-- Internal CSS -->
     <link rel="stylesheet" href="styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="styles/homePage.css" type="text/css" />
+    <link rel="stylesheet" href="styles/list.css" type="text/css" />
+    <link rel="stylesheet" href="styles/jumbotron.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="vendor/jquery-2.2.3.min.js"></script>
@@ -41,32 +42,38 @@
         </main>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#watch">I gotta SEE this</a>
+                <a class="nav-link active" data-toggle="tab" href="#active">Check This Out</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#resto">I gotta EAT here</a>
+            <li class="nav-item watch">
+                    <a class="nav-link" data-toggle="tab" href="#watch">To Watch</a>
+                </li>
+            <li class="nav-item resto">
+                <a  class="nav-link" data-toggle="tab" href="#resto">Restaurants</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#book">I gotta READ this</a>
+            <li class="nav-item book">
+                <a class="nav-link" data-toggle="tab" href="#book">To Books</a>
             </li>
-            <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#product">I gotta GET this</a>
+            <li class="nav-item product">
+                    <a class="nav-link" data-toggle="tab" href="#product">To Buy</a>
             </li>
-            <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#misc">I dont know but I NEED it</a>
+            <li class="nav-item misc">
+                    <a class="nav-link" data-toggle="tab" href="#misc">Misc</a>
             </li>
         </ul>
             
         <!-- Tab panes -->
         <div class="tab-content">
-            <div class="tab-pane container active" id="watch">
-                <ul>
-                    <li>Bohemian Rhapsody</li>
-                    <li>Detective Pikachu</li>
-                    <li>Bob's Burgers</li>
-                    <li>Dark Tourist</li>
-                </ul>
+            <div class="tab-pane container active">
+                <H1>I really gotta check out...</H1>
             </div>
+            <div class="tab-pane container fade" id="watch">
+                    <ul>
+                            <li>Bohemian Rhapsody</li>
+                            <li>Detective Pikachu</li>
+                            <li>Bob's Burgers</li>
+                            <li>Dark Tourist</li>
+                    </ul>
+                </div>
             <div class="tab-pane container fade" id="resto">
                 <ul>
                     <li>Ogam chicken</li>
