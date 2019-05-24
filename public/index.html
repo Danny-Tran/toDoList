@@ -27,8 +27,9 @@
     <script type="text/javascript" src="scripts/app.js"></script>
 
     </head>
+
     <body>
-            <!-- Jumbo -->
+        <!-- Jumbo -->
         <div class="jumbotron jumbotron-fluid">
             <img class="logo" src="images/logo.png" width="90px" height="90px"> 
             <div class="container">
@@ -36,32 +37,32 @@
                 <p>...check it and come back later</p>
             </div>
             <p class="user">Hello Friend!</p>
-            <!-- <button type="button" id="toList">Take me to my List!</button> -->
         </div>
+
         <main id="page">
             <!-- homePage -->
             <section class="addCheckIt">
-                    <form id="addToDo" action="/" method="POST">
-                        <div class="input-group mt-3 mb-3">
-                            <div class="input-group-prepend">
-                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                                </button>
-                                <select class="checkIt" name="activities">
-                                        <option id="resto" value="resto">What to eat</option>
-                                        <option id="book" value="books">What to read</option>
-                                        <option id="movie" value="movies">What to watch</option>
-                                        <option id="product" value="products">What to buy</option>
-                                </select>
-                            <textarea placeholder="Add something to Check Out!"
-                                name="text"></textarea>
-                        </div>
-                        <div class="addCheckItFooter">
-                            <input class="checkIt" type="submit" 
-                                value="checkIt">
-                        </div>
-                    </form>
-                </section>
+                <form id="addToDo" action="/" method="POST">
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <select class="checkIt" name="activities">
+                                    <option id="resto" value="resto">What to eat</option>
+                                    <option id="book" value="books">What to read</option>
+                                    <option id="movie" value="movies">What to watch</option>
+                                    <option id="product" value="products">What to buy</option>
+                            </select>
+                        <textarea placeholder="Add something to Check Out!"
+                            name="text"></textarea>
+                    </div>
+                    <div class="addCheckItFooter">
+                        <input class="checkIt" type="submit" 
+                            value="checkIt">
+                    </div>
+                </form>
+            </section>
         </main>
+
+        <!-- NavTabs -->
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#active">Check This Out</a>
@@ -124,7 +125,8 @@
                     </ul>
                 </div>
         </div>
-        <div>
+        
+        <div class="footer">
             <footer>
                 <p>Created by: DDK</p>
             </footer>

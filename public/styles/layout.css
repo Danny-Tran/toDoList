@@ -20,8 +20,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0;
-  background-color: white;
   font-family: 'raleway', 'sans-serif';
+  background-image: url("../images/desktop.png");
+  background-size: cover;
 }
 
 main#page {
@@ -31,7 +32,6 @@ main#page {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: aliceblue;
 }
 
 footer {
