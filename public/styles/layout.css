@@ -42,6 +42,7 @@ footer {
       -ms-flex-pack: end;
           justify-content: flex-end;
   color: #5BC0EB;
-  padding: 1em;
+  padding: 0 1em;
+  border-top: 1px solid aliceblue;
 }
 /*# sourceMappingURL=layout.css.map */

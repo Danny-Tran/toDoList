@@ -30,7 +30,7 @@ function handleFormSubmit() {
 }
 
 $(document).ready(function(){
-  homePage();
+  // homePage();
   handleFormSubmit();
 })
 

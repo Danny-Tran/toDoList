@@ -7,18 +7,15 @@
 .nav.nav-tabs{
     background-color: aliceblue;
 }
-.tab-content{
-    height: 25em;
+
+.tab-content>.active  {
+    height: 15em;
     margin: 0;
 }
 
-.tab-content>.active  {
-    height: 20em;
-}
-
-.nav-item #watch{
-    background-color: $supportColor1;
-}
+// .nav-item #watch{
+//     background-color: $supportColor1;
+// }
 .nav-item.watch, .tab-content #watch {
     background-color: $supportColor1;
 }
