@@ -2,13 +2,14 @@
 
 .nav-link{
     color: black;
+    border: .5px solid black;
 }
 .nav.nav-tabs{
     background-color: aliceblue;
 }
-// .tab-content{
-//     height: 25em;
-// }
+.tab-content{
+    height: 25em;
+}
 
 .tab-content>.active  {
     height: 25em;

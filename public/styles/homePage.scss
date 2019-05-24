@@ -2,28 +2,32 @@
 
 section.addCheckIt {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin: 1em;
     padding: 10px;
-    border: 2px solid black;
-    border-radius: 21px;
+    border: 1px solid black;
+    border-radius: 100px;
     background-color: #f0e9e999;
     
     form#addToDo {
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 80%;
         
-        button{
-            $primaryColor;
+        .input-group {
+            display: block;
         }
+        
         textarea{
         justify-content: center;
         width: 150%;
         }
         .addCheckItFooter {
-            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 0;
             width: 100%;
         }
         .checkIt {

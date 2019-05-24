@@ -1,12 +1,9 @@
 section.addCheckIt {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+  align-items: center;
+  width: 550px;
   margin: 1em;
+  flex-direction: column;
   padding: 10px;
   border: 2px solid black;
   border-radius: 21px;
@@ -14,20 +11,14 @@ section.addCheckIt {
 }
 
 section.addCheckIt form#addToDo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+  align-items: center;
+  flex-direction: column;
 }
 
 section.addCheckIt form#addToDo textarea {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 150%;
+  justify-content: center;
+  width: 100%;
 }
 
 section.addCheckIt form#addToDo .addCheckItFooter {
@@ -35,8 +26,7 @@ section.addCheckIt form#addToDo .addCheckItFooter {
   width: 100%;
 }
 
-section.addCheckIt form#addToDo .checkIt {
+.checkIt {
   border-radius: 4px;
   width: 100px;
 }
-/*# sourceMappingURL=homePage.css.map */

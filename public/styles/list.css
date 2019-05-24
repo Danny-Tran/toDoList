@@ -6,10 +6,6 @@
   background-color: aliceblue;
 }
 
-.tab-content > .active {
-  height: 25em;
-}
-
 .nav-item #watch {
   background-color: #EAD923;
 }
@@ -27,10 +23,9 @@
 }
 
 .nav-item.product, .tab-content #product {
-  background-color: #EF0E0E;
+  background-color: #e90a0a;
 }
 
 .nav-item.misc, .tab-content #misc {
   background-color: #5BC0EB;
 }
-/*# sourceMappingURL=list.css.map */
