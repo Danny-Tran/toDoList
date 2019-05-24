@@ -57,16 +57,17 @@ function bookFormSubmit() {
   }) 
 }
 
+//Resto GET --- Consider switching to google places
 function restoFormSubmit() {
   const restoButton = $('#submitform');
   restoButton.on("submit", function(event) {
       event.preventDefault();
       let input = $('#textarea').val();
-      let api = `https://developers.zomato.com/api/v2.1/search?entity_id=300&entity_type=city&q=${input}`;
+      let api = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`;
       fetch(api)
       .then((resp) => resp.json())
       .then(function(resto) {
-          $("#movielist").append(`<li>${resto.restaurants[0].restaurant.name}</li>`)
+          $("#movielist").append(`<li>${resto.candidates[0].name} - ${resto.candidates[0].types[1]}</li>`)
       });  
   })
   .catch(function(err) {
@@ -74,12 +75,40 @@ function restoFormSubmit() {
   }) 
 }
 
+  function renderItems(items) {
+    $("#watch-items").empty();
+    $("#eat-items").empty();
+    $("#read-items").empty();
+    $("#buy-items").empty();
+    $("#misc-items").empty();
+      for (let item of items) {
+        let liWrap = $("<li>").addClass("cat-list");
+        let labelWrap = $("<label>").addClass("label-checkbox");
+        let inputWrap = $("<input type='checkbox'>").addClass("checkbox");
+      
+        liWrap.append(labelWrap).append(inputWrap);
+      }
+  }
+
+// $('#page').on("click", '#form', function) {}
+
+let mainPage = $('#page')
+
 $(document).ready(function(){
-  // movieFormSubmit()
-  restoFormSubmit();
-  homePage();
-  handleFormSubmit();
+homePage();
+$('#parent-section').on("select" )
+renderItems()
+
 })
+// if ($('#watchdrop').on("click")) {
+//   return bookFormSubmit();
+
+// }
+
+
+
+
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=attica&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs
 
 
 
@@ -109,3 +138,8 @@ $(document).ready(function(){
 
 //Zomato Restos
 // https://developers.zomato.com/api/v2.1/search?entity_id=300&entity_type=city&q=Cactus
+
+
+
+// Google places
+// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@47.6918452,-122.2226413&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs
