@@ -59,7 +59,7 @@ function bookFormSubmit() {
 
 //Resto GET --- Consider switching to google places
 function restoFormSubmit() {
-  const restoButton = $('#submitform');
+  const restoButton = $('#testform');
   restoButton.on("submit", function(event) {
       event.preventDefault();
       let input = $('#textarea').val();
@@ -67,7 +67,7 @@ function restoFormSubmit() {
       fetch(api)
       .then((resp) => resp.json())
       .then(function(resto) {
-          $("#movielist").append(`<li>${resto.candidates[0].name} - ${resto.candidates[0].types[1]}</li>`)
+          $("#movielist").append(`<li>${resto.candidates[0].name}</li>`)
       });  
   })
   .catch(function(err) {
@@ -92,19 +92,11 @@ function restoFormSubmit() {
 
 // $('#page').on("click", '#form', function) {}
 
-let mainPage = $('#page')
 
 $(document).ready(function(){
 homePage();
-$('#parent-section').on("select" )
-renderItems()
 
 })
-// if ($('#watchdrop').on("click")) {
-//   return bookFormSubmit();
-
-// }
-
 
 
 
