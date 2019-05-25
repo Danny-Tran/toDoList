@@ -3,7 +3,7 @@ function homePage(){
         `
         <section class="addCheckIt" id="parent-section">
             <h1>What do you want to Check Out?</h1>
-            <form id="addToDo" action="/" method="POST">
+            <form id="addToDo" action="/" method="GET">
                 <div class="input-group mt-3 mb-3">
                     <div class="input-group-prepend">
                         <select class="checkIt" name="activities">

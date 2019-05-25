@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/normalize-4.1.1.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">    
+    
     <!-- Internal CSS -->
     <link rel="stylesheet" href="styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="styles/homePage.css" type="text/css" />
@@ -23,12 +24,14 @@
     <!-- pages JS -->
     <script type="text/javascript" src="scripts/homePage.js"></script>
     <script type="text/javascript" src="scripts/listPage.js"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="scripts/app.js"></script>
 
     </head>
+
     <body>
-            <!-- Jumbo -->
+        <!-- Jumbo -->
         <div class="jumbotron jumbotron-fluid">
             <img class="logo" src="images/logo.png" width="90px" height="90px"> 
             <div class="container">
@@ -36,38 +39,39 @@
                 <p>...check it and come back later</p>
             </div>
             <p class="user">Hello Friend!</p>
-            <!-- <button type="button" id="toList">Take me to my List!</button> -->
         </div>
+
         <main id="page">
             <!-- homePage -->
             <section class="addCheckIt">
-                    <form id="addToDo" action="/" method="POST">
-                        <div class="input-group mt-3 mb-3">
-                            <div class="input-group-prepend">
-                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                                </button>
-                                <select class="checkIt" name="activities">
-                                        <option id="restos" value="restos">What to eat</option>
-                                        <option id="book" value="books">What to read</option>
-                                        <option id="movie" value="movies">What to watch</option>
-                                        <option id="product" value="products">What to buy</option>
-                                </select>
-                            <textarea id="textarea" placeholder="Add something to Check Out!" name="text"></textarea>
-                        </div>
-                        <div class="addCheckItFooter">
-                            <input class="checkIt" type="submit" 
-                                value="checkIt">
-                        </div>
-                    </form>
-                </section>
+                <form id="addToDo" action="/" method="POST">
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <select class="checkIt" name="activities">
+                                    <option id="resto" value="resto">What to eat</option>
+                                    <option id="book" value="books">What to read</option>
+                                    <option id="movie" value="movies">What to watch</option>
+                                    <option id="product" value="products">What to buy</option>
+                            </select>
+                        <textarea placeholder="Add something to Check Out!"
+                            name="text"></textarea>
+                    </div>
+                    <div class="addCheckItFooter">
+                        <input class="checkIt" type="submit" 
+                            value="checkIt">
+                    </div>
+                </form>
+            </section>
         </main>
+
+        <!-- Nav Tabs -->
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#active">Check This Out</a>
+                <a class="nav-link" data-toggle="tab" href="#active">Check This Out</a>
             </li>
-            <li class="nav-item watch">
-                    <a class="nav-link" data-toggle="tab" href="#watch">To Watch</a>
-                </li>
+            <li class="nav-item watch ">
+                <a class="nav-link" data-toggle="tab" href="#watch">To Watch</a>
+            </li>
             <li class="nav-item resto">
                 <a  class="nav-link" data-toggle="tab" href="#eat">Restaurants</a>
             </li>
@@ -75,60 +79,70 @@
                 <a class="nav-link" data-toggle="tab" href="#read">To Books</a>
             </li>
             <li class="nav-item product">
-                    <a class="nav-link" data-toggle="tab" href="#buy">To Buy</a>
+                <a class="nav-link" data-toggle="tab" href="#buy">To Buy</a>
             </li>
             <li class="nav-item misc">
-                    <a class="nav-link" data-toggle="tab" href="#misc">Misc</a>
+                <a class="nav-link" data-toggle="tab" href="#misc">Misc</a>
             </li>
         </ul>
-            
+        
         <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane container active">
                 <H1>I really gotta check out...</H1>
             </div>
-            <div class="tab-pane container fade" id="watch">
-                    <ul id="watch-items">
-                            <li>Bohemian Rhapsody</li>
-                            <li>Detective Pikachu</li>
-                            <li>Bob's Burgers</li>
-                            <li>Dark Tourist</li>
-                    </ul>
+            <!-- <div class="tab-pane container fade" id="watch">
+                    <ul>
+                        <li>Bohemian Rhapsody</li>
+                        <li>Detective Pikachu</li>
+                        <li>Bob's Burgers</li>
+                        <li>Dark Tourist</li>
+                    </ul> -->
                 </div>
-            <div class="tab-pane container fade" id="eat">
-                <ul id="eat-items">
+                <div class="tab-pane container fade" id="eat">
+                    <ul>
+                        <li>Ogam chicken</li>
+                        <li>El Furniture Warehouse</li>
+                        <li>Mina's Brazillian</li>
+                    </ul>
+                </div> -->
+            <div class="tab-pane container fade" id="resto">
+                <ul>
                     <li>Ogam chicken</li>
                     <li>El Furniture Warehouse</li>
                     <li>Mina's Brazillian</li>
                 </ul>
             </div>
-            <div class="tab-pane container fade" id="read">
-                <ul id="read-items">
+            <div class="tab-pane container fade" id="book">
+                <ul>
                     <li>Neil Gaiman - American Gods</li>
                     <li>George Orwell - 1984</li>
                     <li>Ernest Cline - Ready Player One</li>
                 </ul>
             </div>
-            <div class="tab-pane container fade" id="buy">
-                <ul id="buy-items">
+            <div class="tab-pane container fade" id="product">
+                <ul>
                     <li>Red Head Socks</li>
                     <li>Live Clean Shampoo</li>
                     <li>Sham Wow</li>
                 </ul>
             </div>
             <div class="tab-pane container fade" id="misc">
-                    <ul id="misc-items">
+                    <ul>
                         <li>Lighthouse Labs</li>
                         <li>Sonic Feild Day</li>
                     </ul>
                 </div>
+                
+            </div>
         </div>
-        <div>
+
+        <div class="footer">
             <footer>
                 <p>Created by: DDK</p>
             </footer>
         </div>
-        <ul id="movielist">
+        <ul id = "movielist">
 
         </ul>
     </body>
