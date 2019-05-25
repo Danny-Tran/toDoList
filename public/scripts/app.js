@@ -1,17 +1,3 @@
-// $(() => {
-//   homePage()
-
-//   $.ajax({
-//     method: "GET",
-//     url: "/api/users"
-//   }).done((users) => {
-//     for(user of users) {
-//       $("<div>").text(user.name).appendTo($("body"));
-//     }
-//   });;
-// });
-
-
 function handleFormSubmit() {
   const searchbutton = $('#submitform');
   searchbutton.on("submit", function(event) {
@@ -22,16 +8,36 @@ function handleFormSubmit() {
       .then((resp) => resp.json())
       .then(function(movie) {
           $("#movielist").append(`<li>${movie.Title} - ${movie.Type}</li>`)
-      });  
+      })  
+      .catch(function(err) {
+        alert(err);
   })
-  .catch(function(err) {
-    alert(err);
   }) 
 }
 
 $(document).ready(function(){
   homePage();
   handleFormSubmit();
+
+  function loadList(){
+    $.ajax({
+      method: "GET",
+      url: "/",
+      data:'',
+      dataType:"json",
+      complete: createList()
+  });
+  
+  function createList(results){
+    console.log ("THIS IS THE RESULTS" ,results)
+    const $list = $('<div class="tab-pane container fade" id="watch">')
+    const $ul = $('<ul>') 
+    const $li = $('<li>')
+    
+    $list.append(($ul).append($li).append(results))
+  }
+  }
+loadList();
 })
 
 

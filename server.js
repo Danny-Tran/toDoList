@@ -14,7 +14,6 @@ client.connect((err)=>{
   }
 })
  
-
 const PORT        = process.env.PORT || 8080;
 const ENV         = process.env.ENV || "development";
 const express     = require("express");
@@ -55,27 +54,27 @@ app.use(express.static("public"));
 app.use("/api/users", usersRoutes(knex));
 
 // Home page
-app.get("/", (req, res) => {
-  res.render(db);
-});
+// app.get("/", (req, res) => {
+//   res.redirect("/");
+// });
 
-app.post("/",(req,res)=>{
-  // get user input
-  const title = req.body.text;
+// app.post("/",(req,res)=>{
+//   // get user input
+//   const title = req.body.text;
 
-  // create a todo item
-  const newTodo = {
-    title,
-    type: "movies",
-    status: 'active',
-    createdAt: Date.now()
-  }
+//   // create a todo item
+//   const newTodo = {
+//     title,
+//     type: "movies",
+//     status: 'active',
+//     createdAt: Date.now()
+//   }
   
-  // add to database
-  db.push(newTodo);
+//   // add to database
+//   db.push(newTodo);
 
-  res.send(newTodo);
-})
+//   res.send(newTodo);
+// })
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
