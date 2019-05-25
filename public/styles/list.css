@@ -1,31 +1,36 @@
 .nav-link {
   color: black;
+  border: .5px solid black;
 }
 
 .nav.nav-tabs {
   background-color: aliceblue;
 }
 
-.nav-item #watch {
-  background-color: #EAD923;
+.tab-content > .active {
+  height: 15em;
+  width: 50vw;
+  margin: 0 0 3em 0;
+  background-color: #fffbb35c;
 }
 
 .nav-item.watch, .tab-content #watch {
   background-color: #EAD923;
 }
 
-.nav-item.resto, .tab-content #resto {
+.nav-item.resto, .tab-content #eat {
   background-color: #9BC53D;
 }
 
-.nav-item.book, .tab-content #book {
+.nav-item.book, .tab-content #read {
   background-color: #c214c2;
 }
 
-.nav-item.product, .tab-content #product {
-  background-color: #e90a0a;
+.nav-item.product, .tab-content #buy {
+  background-color: #EF0E0E;
 }
 
 .nav-item.misc, .tab-content #misc {
   background-color: #5BC0EB;
 }
+/*# sourceMappingURL=list.css.map */
