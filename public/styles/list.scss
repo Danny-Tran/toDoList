@@ -2,23 +2,30 @@
 
 .nav-link{
     color: black;
+    border: .5px solid black;
 }
 .nav.nav-tabs{
     background-color: aliceblue;
 }
-.nav-item #watch{
-    background-color: $supportColor1;
+
+.tab-content>.active  {
+    height: 15em;
+    margin: 0;
 }
+
+// .nav-item #watch{
+//     background-color: $supportColor1;
+// }
 .nav-item.watch, .tab-content #watch {
     background-color: $supportColor1;
 }
-.nav-item.resto, .tab-content #resto {
+.nav-item.resto, .tab-content #eat {
     background-color: $supportColor2;
 }
-.nav-item.book, .tab-content #book {
+.nav-item.book, .tab-content #read {
     background-color: $supportColor4;
 }
-.nav-item.product, .tab-content #product {
+.nav-item.product, .tab-content #buy {
     background-color: $primaryColor;
 }
 .nav-item.misc, .tab-content #misc {

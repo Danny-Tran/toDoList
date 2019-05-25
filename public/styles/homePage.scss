@@ -2,33 +2,35 @@
 
 section.addCheckIt {
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 550px;
+    width: 100%;
     margin: 1em;
-    flex-direction: column;
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 21px;
+    border: 1px solid black;
+    border-radius: 100px;
     background-color: #f0e9e999;
+    z-index: 3;
+    box-shadow: 0px 0px 95px -19px rgba(0,0,0,0.46);
     
     form#addToDo {
         display: flex;
         align-items: center;
-        flex-direction: column;
+        width: 80%;
+        
+        .input-group {
+            display: block;
+        }
         
         textarea{
-        
-        justify-content: center;
-        width: 100%;
+        width: 150%;
         }
         .addCheckItFooter {
-            padding: 10px 0;
+            display: flex;
+            justify-content: center;
             width: 100%;
         }
+        .checkIt {
+            border-radius: 4px;
+        }
     }
-}
-
-.checkIt {
-    border-radius: 4px;
-    width: 100px;
 }

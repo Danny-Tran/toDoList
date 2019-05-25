@@ -62,7 +62,11 @@ app.use("/api/users", usersRoutes(knex));
 //   // get user input
 //   const title = req.body.text;
 
+<<<<<<< HEAD
 //   // create a todo item
+=======
+  // create a todo item
+>>>>>>> eaf0617a46d8bb3b09af76c760c75429f36bf885
 //   const newTodo = {
 //     title,
 //     type: "movies",
