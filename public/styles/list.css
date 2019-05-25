@@ -16,15 +16,15 @@
   background-color: #EAD923;
 }
 
-.nav-item.resto, .tab-content #resto {
+.nav-item.resto, .tab-content #eat {
   background-color: #9BC53D;
 }
 
-.nav-item.book, .tab-content #book {
+.nav-item.book, .tab-content #read {
   background-color: #c214c2;
 }
 
-.nav-item.product, .tab-content #product {
+.nav-item.product, .tab-content #buy {
   background-color: #EF0E0E;
 }
 
