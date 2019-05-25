@@ -13,7 +13,7 @@ client.connect((err)=>{
     return console.error("Connection Error", err);
   }
 })
- 
+
 
 const PORT        = process.env.PORT || 8080;
 const ENV         = process.env.ENV || "development";
@@ -58,6 +58,12 @@ app.use("/api/users", usersRoutes(knex));
 app.get("/", (req, res) => {
   res.render(db);
 });
+
+// Register page
+app.get("/register", (req,res) => {
+  res.redirect("register.html")
+})
+
 
 // app.post("/",(req,res)=>{
 //   // get user input

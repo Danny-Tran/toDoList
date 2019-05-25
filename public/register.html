@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Check It</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="vendor/normalize-4.1.1.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">    
+        <script type="text/javascript" src="vendor/jquery-3.0.0.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+
+
+    </head>
+
+    <body>    
+        <div>
+            <h1>Welcome to Check It!</h1>
+            <p>A place to store your recommomendations and check them out later!</p>
+        </div>
+        
+        <div>
+            <h2>Login to check it out</h2>
+            <form id="login" action="/register" method="POST">
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="password" placeholder="Password">
+                <input type="submit"  placeholder="Log Me In!">
+            </form>
+            <h2>Or Register to begin</h2>
+            <form id="login" action="/register" method="GET">
+                <input type="email" id="email" placeholder="give me your email">
+                <input type="text" name="password" id="password" placeholder="create a password">
+                <input type="submit" placeholder="i gotta Check It">
+            </form>
+        </div>
+    </body>    
+</html>

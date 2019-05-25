@@ -95,7 +95,13 @@ function restoFormSubmit() {
 
 $(document).ready(function(){
   
+  $('form#login').on('submit', (function() {
+    console.log("clicked")
+    redirect("index.html")
+  }));
   // handleFormSubmit();
+  
+
 
 })
 

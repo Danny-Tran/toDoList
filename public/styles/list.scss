@@ -10,12 +10,11 @@
 
 .tab-content>.active  {
     height: 15em;
-    margin: 0;
+    width: 60vw;
+    margin-bottom: 7em;
+    background-color: #fffbb35c;
 }
 
-// .nav-item #watch{
-//     background-color: $supportColor1;
-// }
 .nav-item.watch, .tab-content #watch {
     background-color: $supportColor1;
 }
