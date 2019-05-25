@@ -15,11 +15,13 @@ module.exports = (knex) => {
   // });
   
   router.get("/",(req,res) =>{
+    console.log('GET MOVIES')
     knex
       .select("title")
       .from("chores")
-      .where({"category" : "movie"})
+      .where("category", "movie")
       .then(results => {
+        console.log( "THIS IS THE REULTS FROM BACKEND", results)
         res.json(results);    
         })
       // res.send (client)

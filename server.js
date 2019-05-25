@@ -51,7 +51,7 @@ const db = []
 app.use(express.static("public"));
 
 // Mount all resource routes
-app.use("/api/users", usersRoutes(knex));
+app.use("/", usersRoutes(knex));
 
 // Home page
 // app.get("/", (req, res) => {
@@ -62,11 +62,7 @@ app.use("/api/users", usersRoutes(knex));
 //   // get user input
 //   const title = req.body.text;
 
-<<<<<<< HEAD
-//   // create a todo item
-=======
   // create a todo item
->>>>>>> eaf0617a46d8bb3b09af76c760c75429f36bf885
 //   const newTodo = {
 //     title,
 //     type: "movies",
@@ -82,4 +78,5 @@ app.use("/api/users", usersRoutes(knex));
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
+  console.log(app._router.stack)
 });

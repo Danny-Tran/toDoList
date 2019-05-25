@@ -1,36 +1,6 @@
-<<<<<<< HEAD
 function handleFormSubmit() {
   const searchbutton = $('#submitform');
   searchbutton.on("submit", function(event) {
-=======
-// $(() => {
-//   homePage()
-
-//   $.ajax({
-//     method: "GET",
-//     url: "/api/users"
-//   }).done((users) => {
-//     for(user of users) {
-//       $("<div>").text(user.name).appendTo($("body"));
-//     }
-//   });;
-// });
-
-//   $.ajax({
-//     method: "GET",
-//     url: "/api/users"
-//   }).done((users) => {
-//     for(user of users) {
-//       $("<div>").text(user.name).appendTo($("body"));
-//     }
-//   });;
-// });
-
-//Movie GET
-function movieFormSubmit() {
-  const movieButton = $('#submitform');
-  movieButton.on("submit", function(event) {
->>>>>>> eaf0617a46d8bb3b09af76c760c75429f36bf885
       event.preventDefault();
       let input = $('#textarea').val();
       let api = `http://www.omdbapi.com/?t=${input}&apikey=d566210c`;
@@ -100,34 +70,31 @@ function restoFormSubmit() {
 
 
 $(document).ready(function(){
-<<<<<<< HEAD
-  homePage();
-  handleFormSubmit();
-
-  function loadList(){
-    $.ajax({
-      method: "GET",
-      url: "/",
-      data:'',
-      dataType:"json",
-      complete: createList()
-  });
-  
-  function createList(results){
-    console.log ("THIS IS THE RESULTS" ,results)
-    const $list = $('<div class="tab-pane container fade" id="watch">')
-    const $ul = $('<ul>') 
-    const $li = $('<li>')
-    
-    $list.append(($ul).append($li).append(results))
-  }
-  }
-loadList();
-=======
-  
+  // homePage();
   // handleFormSubmit();
 
->>>>>>> eaf0617a46d8bb3b09af76c760c75429f36bf885
+  function loadList(){
+    $(".check_button").click(function(){
+      $.ajax({
+        method: "GET",
+        url: "api/movies",
+        data:'',
+        dataType:"json",
+        success: createList
+    });
+
+    function createList(results){
+      console.log ("THIS IS THE RESULTS" ,results)
+      const $list = $('<div class="tab-pane container fade" id="watch">')
+      const $ul = $('<ul>') 
+      const $li = $('<li>')
+      
+      $list.append(($ul).append($li).append(results))
+    }
+    })
+  
+  }
+  loadList();
 })
 
 
