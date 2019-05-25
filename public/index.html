@@ -47,13 +47,12 @@
                             <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
                                 </button>
                                 <select class="checkIt" name="activities">
-                                        <option id="resto" value="resto">What to eat</option>
+                                        <option id="restos" value="restos">What to eat</option>
                                         <option id="book" value="books">What to read</option>
                                         <option id="movie" value="movies">What to watch</option>
                                         <option id="product" value="products">What to buy</option>
                                 </select>
-                            <textarea placeholder="Add something to Check Out!"
-                                name="text"></textarea>
+                            <textarea id="textarea" placeholder="Add something to Check Out!" name="text"></textarea>
                         </div>
                         <div class="addCheckItFooter">
                             <input class="checkIt" type="submit" 
@@ -70,13 +69,13 @@
                     <a class="nav-link" data-toggle="tab" href="#watch">To Watch</a>
                 </li>
             <li class="nav-item resto">
-                <a  class="nav-link" data-toggle="tab" href="#resto">Restaurants</a>
+                <a  class="nav-link" data-toggle="tab" href="#eat">Restaurants</a>
             </li>
             <li class="nav-item book">
-                <a class="nav-link" data-toggle="tab" href="#book">To Books</a>
+                <a class="nav-link" data-toggle="tab" href="#read">To Books</a>
             </li>
             <li class="nav-item product">
-                    <a class="nav-link" data-toggle="tab" href="#product">To Buy</a>
+                    <a class="nav-link" data-toggle="tab" href="#buy">To Buy</a>
             </li>
             <li class="nav-item misc">
                     <a class="nav-link" data-toggle="tab" href="#misc">Misc</a>
@@ -96,21 +95,21 @@
                             <li>Dark Tourist</li>
                     </ul>
                 </div>
-            <div class="tab-pane container fade" id="resto">
+            <div class="tab-pane container fade" id="eat">
                 <ul id="eat-items">
                     <li>Ogam chicken</li>
                     <li>El Furniture Warehouse</li>
                     <li>Mina's Brazillian</li>
                 </ul>
             </div>
-            <div class="tab-pane container fade" id="book">
+            <div class="tab-pane container fade" id="read">
                 <ul id="read-items">
                     <li>Neil Gaiman - American Gods</li>
                     <li>George Orwell - 1984</li>
                     <li>Ernest Cline - Ready Player One</li>
                 </ul>
             </div>
-            <div class="tab-pane container fade" id="product">
+            <div class="tab-pane container fade" id="buy">
                 <ul id="buy-items">
                     <li>Red Head Socks</li>
                     <li>Live Clean Shampoo</li>
@@ -129,5 +128,8 @@
                 <p>Created by: DDK</p>
             </footer>
         </div>
+        <ul id="movielist">
+
+        </ul>
     </body>
 </html>
