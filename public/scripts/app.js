@@ -110,7 +110,7 @@ $(document).ready(function(){
     }
   
     const createList = list => {
-      const $ul = $('<ul>');
+      const $ul = $("#eat-items")
       list.forEach(listItem => {
         const $li = $('<li>');
         $li.append(listItem.title);
