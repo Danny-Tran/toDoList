@@ -18,22 +18,6 @@
 //   });;
 // });  "restos": (input) => `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`,
 
-const restaurant = {
-    
-  "Cactus": "Cactus Club Cafe",
-  "earls": "Earls",
-  "Popeyes": "Popeyes",
-  "Minas": "Minas Brazilian Steakhouse",
-  "earls": "Earls",
-  "Keg": "The Keg",
-  "Osteria": "Osteria",
-  "Menyatai": "Menyatai",
-  "Muku": "Muku Japanese Ramen",
-  "Little Spice": "Little Spice",
-  "a&w": "A&W",
-  "El Furniture": "El Furniture Warehouse",
-  "Joey": "Joey Eau Claire"      
-}
 
 
 const APIS = {
@@ -57,11 +41,11 @@ function onFormSubmit() {
       .then((resp) => resp.json())
       .then(function(data) {
         if(apiChoice === 'movies') {
-          return $("#watch-items").append(`<li>${data.Title} - ${data.Type}</li>`)
+          return $("#watch-items").append(`<li>${data.Title}</li>`)
         }
 
         if (apiChoice === 'books') {
-          return $("#read-items").append(`<li>${data.items[0].volumeInfo.title} - ${data.items[0].volumeInfo.printType}</li>`)
+          return $("#read-items").append(`<li>${data.items[0].volumeInfo.title}</li>`)
         }
 
         if (apiChoice === 'products') {
@@ -74,19 +58,19 @@ function onFormSubmit() {
   })
 }
 
-function onRestoSubmit() {
-  const form = $('#addToDo');
-    form.on("submit", function(event) {
-    event.preventDefault();
-  const restoObj = restaurant
-  const restoInput = $('#textarea').val()
-  for (key in restoObj) {
-    if (restoInput === key) {
-      console.log(restaurant[key]);
-    }
-  }
-})
-  }
+// function onRestoSubmit() {
+//   const form = $('#addToDo');
+//     form.on("submit", function(event) {
+//     event.preventDefault();
+//   const restoObj = restaurant
+//   const restoInput = $('#textarea').val()
+//   for (key in restoObj) {
+//     if (restoInput === key) {
+//       console.log(restaurant[key]);
+//     }
+//   }
+// })
+//   }
 
 function renderItems(items) {
     $("#watch-items").empty();
@@ -110,10 +94,7 @@ $(document).ready(function(){
     redirect("index")
   }));
   // handleFormSubmit();
-  
-
-
-onFormSubmit();
+  onFormSubmit();
 })
 
 
