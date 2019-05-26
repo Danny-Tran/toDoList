@@ -14,7 +14,6 @@ client.connect((err)=>{
   }
 })
 
-
 const PORT        = process.env.PORT || 8080;
 const ENV         = process.env.ENV || "development";
 const express     = require("express");
@@ -55,9 +54,9 @@ app.use(express.static("public"));
 app.use("/api/users", usersRoutes(knex));
 
 // Home page
-app.get("/", (req, res) => {
-  res.render(db);
-});
+// app.get("/", (req, res) => {
+//   res.redirect("/");
+// });
 
 // Register page
 app.get("/register", (req,res) => {
@@ -69,7 +68,7 @@ app.get("/register", (req,res) => {
 //   // get user input
 //   const title = req.body.text;
 
-  // create a todo item
+//   // create a todo item
 //   const newTodo = {
 //     title,
 //     type: "movies",
