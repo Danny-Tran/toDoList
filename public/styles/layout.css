@@ -32,8 +32,6 @@ body main#page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 1em 3em;
 }
 /*# sourceMappingURL=layout.css.map */
