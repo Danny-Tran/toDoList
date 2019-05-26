@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function handleFormSubmit() {
   const searchbutton = $('#submitform');
   searchbutton.on("submit", function(event) {
@@ -14,44 +15,69 @@ function handleFormSubmit() {
   })
   }) 
 }
+=======
 
-//Book GET ---- Change Jquery id tags for Separate button
-function bookFormSubmit() {
-  const bookButton = $('#submitform');
-  bookButton.on("submit", function(event) {
-      event.preventDefault();
-      let input = $('#textarea').val();
-      let api = `https://www.googleapis.com/books/v1/volumes?q=${input}&key=AIzaSyDd1bZjix5lQXjGFAZ8x67mblYDt7VtxoA`;
-      fetch(api)
-      .then((resp) => resp.json())
-      .then(function(book) {
-          $("#movielist").append(`<li>${book.items[0].volumeInfo.title} - ${book.items[0].volumeInfo.printType}</li>`)
-      });  
-  })
-  .catch(function(err) {
-    alert(err);
-  }) 
+//   $.ajax({
+//     method: "GET",
+//     url: "/api/users"
+//   }).done((users) => {
+//     for(user of users) {
+//       $("<div>").text(user.name).appendTo($("body"));
+//     }
+//   });;
+// });
+
+//   $.ajax({
+//     method: "GET",
+//     url: "/api/users"
+//   }).done((users) => {
+//     for(user of users) {
+//       $("<div>").text(user.name).appendTo($("body"));
+//     }
+//   });;
+// });  "restos": (input) => `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`,
+
+>>>>>>> master
+
+const APIS = {
+  "restos": (input) => `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`,
+  "books": (input) => `https://www.googleapis.com/books/v1/volumes?q=${input}&key=AIzaSyDd1bZjix5lQXjGFAZ8x67mblYDt7VtxoA`,
+  "movies": (input) => `http://www.omdbapi.com/?t=${input}&apikey=d566210c`,
+  "products": (input) => undefined
 }
 
-//Resto GET --- Consider switching to google places
-function restoFormSubmit() {
-  const restoButton = $('#testform');
-  restoButton.on("submit", function(event) {
+//API Call
+function onFormSubmit() {
+  const form = $('#addToDo');
+  form.on("submit", function(event) {
       event.preventDefault();
-      let input = $('#textarea').val();
-      let api = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`;
+      const input = $('#textarea').val();
+      const apiChoice = $('select.checkIt').val();
+      const api = APIS[apiChoice](input);
+      console.log("Choice api", input)
+
       fetch(api)
       .then((resp) => resp.json())
-      .then(function(resto) {
-          $("#movielist").append(`<li>${resto.candidates[0].name}</li>`)
-      });  
+      .then(function(data) {
+        if(apiChoice === 'movies') {
+          return $("#watch-items").append(`<li>${data.Title} - ${data.Type}</li>`)
+        }
+
+        if (apiChoice === 'books') {
+          return $("#read-items").append(`<li>${data.items[0].volumeInfo.title} - ${data.items[0].volumeInfo.printType}</li>`)
+        }
+
+        if (apiChoice === 'restos') {
+          return $("#movielist").append(`<li>${data.candidates[0].name}</li>`)
+        }
+      })
+      .catch(function(err) {
+        alert(err)
+      })  
   })
-  .catch(function(err) {
-    alert(err);
-  }) 
 }
 
-  function renderItems(items) {
+function renderItems(items) {
     $("#watch-items").empty();
     $("#eat-items").empty();
     $("#read-items").empty();
@@ -66,10 +92,8 @@ function restoFormSubmit() {
       }
   }
 
-// $('#page').on("click", '#form', function) {}
-
-
 $(document).ready(function(){
+<<<<<<< HEAD
   $('#addToDo').submit(function(event){
     event.preventDefault();
     const txt = $(".textBox").val();
@@ -120,6 +144,11 @@ $(document).ready(function(){
 // })
 
 
+=======
+
+onFormSubmit();
+})
+>>>>>>> master
 
 
 
@@ -158,3 +187,14 @@ $(document).ready(function(){
 
 // Google places
 // https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@47.6918452,-122.2226413&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs
+
+
+//Yelp API
+// SAkDMYC750wPdnzXMGp410qhCIg4K3FLQMa8g_QpnsPo1i33IAOm4JUCXoxvp0ihDQ94kDGYpOBtLHga98liNiZ1sMKPiXFU-6ndPZOF0OfD0La7m2DgbiB0bYvoXHYx
+// https://api.yelp.com/v3/businesses/search
+// Client ID
+// 6gEGx3vrvLfzOlo5K9KBMA
+
+// en_CA
+
+// Bearer SAkDMYC750wPdnzXMGp410qhCIg4K3FLQMa8g_QpnsPo1i33IAOm4JUCXoxvp0ihDQ94kDGYpOBtLHga98liNiZ1sMKPiXFU-6ndPZOF0OfD0La7m2DgbiB0bYvoXHYxapi.yelp.com/v3/businesses/search?term=delis&latitude=51.0486&longitude=-114.0708
