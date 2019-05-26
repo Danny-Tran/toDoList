@@ -1,0 +1,49 @@
+@import '_variables.scss';
+
+html {
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    font-family: 'raleway', 'sans-serif';
+    height: 100vh;
+    
+    .video-container{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: url("../images/Notes.jpg");
+        background-size: cover;
+        overflow: hidden;
+    }
+    .container{
+        display: flex;
+        text-align: center;
+        z-index: 5;
+        background-color: #e7e0d58f;
+        justify-content: center;
+        flex-direction: column;
+        width: 730px;
+        margin: 0 9vw;
+        padding: 2em;
+        
+        .welcome{
+            font-size: 2rem;
+        }
+        .formContainer{
+            height: 30vh;
+            font-size: 1.5rem;
+        }
+    }
+}

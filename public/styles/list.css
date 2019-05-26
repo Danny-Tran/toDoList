@@ -5,11 +5,26 @@
 
 .nav.nav-tabs {
   background-color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 69%;
+  margin-left: 4%;
+  border-radius: 17px;
 }
 
 .tab-content > .active {
-  height: 15em;
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 15em;
+  width: 50vw;
+  margin: 0 0 3em 0;
+  background-color: #fffbb399;
 }
 
 .nav-item.watch, .tab-content #watch {
@@ -21,11 +36,11 @@
 }
 
 .nav-item.book, .tab-content #read {
-  background-color: #c214c2;
+  background-color: #e287e2;
 }
 
 .nav-item.product, .tab-content #buy {
-  background-color: #EF0E0E;
+  background-color: #fa2d2d;
 }
 
 .nav-item.misc, .tab-content #misc {

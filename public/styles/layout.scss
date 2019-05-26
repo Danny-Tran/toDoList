@@ -2,6 +2,7 @@
 
 html {
     box-sizing: border-box;
+    height: 100vh;
 }
 
 *, *:before, *:after {
@@ -9,26 +10,21 @@ html {
 }
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
-    // background-color: white;
     font-family: 'raleway', 'sans-serif';
-    background-image: url("../images/desktop.png");
+    font-size: 1.5rem;
+    background-image: url("../images/BulletinBoard.png");
     background-size: cover;
+    
+    
+    main#page {
+        display: flex;
+        justify-content: center;
+    }
+    
 }
 
-main#page{
-    display: flex;
-    justify-content: center;
-    // background-color: aliceblue;
-}
-
-footer{
-    display: flex;
-    justify-content: flex-end;
-    color: $supportColor3;
-    padding: 0 1em;
-    border-top: 1px solid aliceblue;
-}
