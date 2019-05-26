@@ -76,9 +76,9 @@ function renderItems(items) {
 $(document).ready(function(){
   $('#addToDo').submit(function(event){
     event.preventDefault();
-    const txt = $(".textBox").val();
+    const txt = $("#textarea").val();
     if (!txt ) {
-      return alert("please eneter and item")
+      return alert("please enter an item")
     }
     $.ajax({
       method: "POST",
