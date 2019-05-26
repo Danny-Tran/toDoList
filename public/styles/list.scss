@@ -8,6 +8,9 @@
     background-color: aliceblue;
     display: flex;
     flex-wrap: wrap;
+    max-width: 69%;
+    margin-left: 4%;
+    border-radius: 17px;
 }
 
 .tab-content>.active  {

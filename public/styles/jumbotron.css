@@ -34,7 +34,7 @@
 }
 
 .jumbotron-fluid .user {
-  display: inline-block;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

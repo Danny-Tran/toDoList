@@ -16,12 +16,13 @@ body {
     justify-content: center;
     margin: 0;
     font-family: 'raleway', 'sans-serif';
+    height: 100vh;
     
     .video-container{
         position: absolute;
         top: 0;
-        min-width: 100%;
-        min-height: 100vh;
+        bottom: 0;
+        width: 100%;
         background-image: url("../images/Notes.jpg");
         background-size: cover;
         overflow: hidden;
@@ -33,11 +34,16 @@ body {
         background-color: #e7e0d58f;
         justify-content: center;
         flex-direction: column;
-        width: 600px;
-        margin: 9vw;
+        width: 730px;
+        margin: 0 9vw;
         padding: 2em;
+        
         .welcome{
             font-size: 2rem;
+        }
+        .formContainer{
+            height: 30vh;
+            font-size: 1.5rem;
         }
     }
 }
