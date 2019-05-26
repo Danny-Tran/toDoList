@@ -25,6 +25,7 @@ body {
   font-family: 'raleway', 'sans-serif';
   background-image: url("../images/BulletinBoard.png");
   background-size: cover;
+  overflow: hidden;
 }
 
 body main#page {

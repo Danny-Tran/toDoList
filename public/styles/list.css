@@ -8,10 +8,15 @@
 }
 
 .tab-content > .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 15em;
   width: 50vw;
   margin: 0 0 3em 0;
-  background-color: #fffbb35c;
+  background-color: #fffbb399;
 }
 
 .nav-item.watch, .tab-content #watch {
