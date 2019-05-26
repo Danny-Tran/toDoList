@@ -5,6 +5,11 @@
 
 .nav.nav-tabs {
   background-color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .tab-content > .active {
@@ -13,7 +18,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 15em;
+  min-height: 15em;
   width: 50vw;
   margin: 0 0 3em 0;
   background-color: #fffbb399;
