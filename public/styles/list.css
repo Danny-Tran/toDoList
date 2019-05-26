@@ -23,11 +23,11 @@
 }
 
 .nav-item.book, .tab-content #read {
-  background-color: #c214c2;
+  background-color: #e287e2;
 }
 
 .nav-item.product, .tab-content #buy {
-  background-color: #EF0E0E;
+  background-color: #fa2d2d;
 }
 
 .nav-item.misc, .tab-content #misc {
