@@ -61,7 +61,7 @@ app.get("/", (req, res) => {
 
 // Register page
 app.get("/register", (req,res) => {
-  res.redirect("register")
+  res.redirect("/")
 })
 
 

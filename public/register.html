@@ -26,18 +26,18 @@
         <main class="container">
             <div class="welcome">
                 <h1>Welcome to Check It!</h1>
-                <p>A place to store your recommomendations and check them out later!</p>
+                <p>The place to store your recommomendations and check them out later!</p>
             </div>
             
             <div>
                 <h2>Login to check it out</h2>
-                <form id="login" action="/register" method="POST">
+                <form id="login" action="/register" method="GET">
                     <input type="email" id="email" placeholder="Email">
-                    <input type="text" id="password" placeholder="Password">
+                    <input type="text" name="password" id="password" placeholder="Password">
                     <input type="submit"  placeholder="Log Me In!">
                 </form>
                 <h2>Or Register to begin</h2>
-                <form id="login" action="/register" method="GET">
+                <form id="register" action="/register" method="GET">
                     <input type="email" id="email" placeholder="give me your email">
                     <input type="text" name="password" id="password" placeholder="create a password">
                     <input type="submit" placeholder="i gotta Check It">
