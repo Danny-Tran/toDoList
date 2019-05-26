@@ -21,6 +21,7 @@
   -ms-flex-item-align: center;
       align-self: center;
   padding: 6px 0 19px;
+  width: 8%;
 }
 
 .jumbotron-fluid .container {
