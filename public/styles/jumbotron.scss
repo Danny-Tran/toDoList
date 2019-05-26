@@ -1,28 +1,30 @@
 @import '_variables.scss';
 
-.logo {
-    display: flex;
-    height: 10%;
-    padding: 6px 0;
-    margin: 1px 0;
-}
 .jumbotron-fluid {
     background-color: $primaryColor;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row; 
     align-content: center;
-    padding: 0 1em;
+    padding: 0 3em;
     margin-bottom: 0;
-
+    position: relative
+    
+    .logo {
+        display: flex;
+        align-self: center;
+        padding: 6px 0 19px;
+    
+    }
     .container{
         display: flex;
         flex-direction: column;
         font-weight: 700;
     }
     .user{
-        position: relative;
         justify-content: center;
         align-content: center;
-
+        align-self: center;
+        
+    
     }
 }
