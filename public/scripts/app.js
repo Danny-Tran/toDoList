@@ -70,32 +70,49 @@ function restoFormSubmit() {
 
 
 $(document).ready(function(){
-  // homePage();
-  // handleFormSubmit();
+  // $('.textBox').keyup(function(){
+  //   const txt = $(this).val();
+  //   if (txt ) {
+      
+  //   }
+  // })
 
-  function loadList(){
-    $(".check_button").click(function(){
+  $('.check_button').click(function(){
+    event.preventDefault();
+    function loadList(){
       $.ajax({
         method: "GET",
-        url: "api/movies",
-        data:'',
-        dataType:"json",
-        success: createList
-    });
-
-    function createList(results){
-      console.log ("THIS IS THE RESULTS" ,results)
-      const $list = $('<div class="tab-pane container fade" id="watch">')
-      const $ul = $('<ul>') 
-      const $li = $('<li>')
-      
-      $list.append(($ul).append($li).append(results))
+        url: "/list",
+      }).done(function(list){
+        renderList(list)
+        
+      })
     }
-    })
+    
+    
+    const renderList = list =>{
+    console.log(list)
+    $list = createList(list);
+    $('.tab-content #eat').prepend($list);
+    }
   
-  }
-  loadList();
+    const createList = list => {
+    const $ul = $('<ul>');
+    list.forEach(listItem => {
+      const $li = $('<li>');
+      $li.append(listItem.title);
+      $ul.append($li);
+    });
+    return $ul;
+    }
+  
+    loadList();
+  })  
+  
+  
 })
+
+
 
 
 
