@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles/homePage.css" type="text/css" />
     <link rel="stylesheet" href="styles/list.css" type="text/css" />
     <link rel="stylesheet" href="styles/jumbotron.css" type="text/css" />
-
     <!-- External JS -->
     <script type="text/javascript" src="vendor/jquery-3.0.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -24,7 +23,6 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="scripts/app.js"></script>
-
     </head>
     <body>
         <!-- Jumbo -->
@@ -43,7 +41,7 @@
         <main id="page">
             <!-- homePage -->
             <section class="addCheckIt">
-                <form id="addToDo" action="/" method="POST">
+                <form id="addToDo" action="/" method="GET">
                     <div class="input-group mt-3 mb-3">
                         <div class="input-group-prepend">
                             <select class="checkIt" name="activities">
@@ -56,13 +54,12 @@
                             name="text"></textarea>
                     </div>
                     <div class="addCheckItFooter">
-                        <input class="checkIt" type="submit" 
+                        <input class="check_button" type="submit" 
                             value="checkIt">
                     </div>
                 </form>
             </section>
         </main>
-
         <!-- Nav Tabs -->
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -92,7 +89,7 @@
                     <H1>I really gotta check out...</H1>
                 </div>
                 <div class="tab-pane container fade" id="watch">
-                    <ul>
+                    <ul id="watch-items">
                         <li>Bohemian Rhapsody</li>
                         <li>Detective Pikachu</li>
                         <li>Bob's Burgers</li>
@@ -100,21 +97,21 @@
                     </ul>
                 </div>
                 <div class="tab-pane container fade" id="eat">
-                    <ul>
+                    <ul id="eat-items">
                         <li>Ogam chicken</li>
                         <li>El Furniture Warehouse</li>
                         <li>Mina's Brazillian</li>
                     </ul>
                 </div>
                 <div class="tab-pane container fade" id="read">
-                    <ul>
+                    <ul id="read-items">
                         <li>Neil Gaiman - American Gods</li>
                         <li>George Orwell - 1984</li>
                         <li>Ernest Cline - Ready Player One</li>
                     </ul>
                 </div>
                 <div class="tab-pane container fade" id="buy">
-                    <ul>
+                    <ul id="buy-items">
                         <li>Red Head Socks</li>
                         <li>Live Clean Shampoo</li>
                         <li>Sham Wow</li>
@@ -129,6 +126,16 @@
                 
             </div>
         </div>
+
+        <div class="footer">
+            <footer>
+                <p>Created by: DDK</p>
+            </footer>
+        </div>
+
+        <ul class = "movielist">
+
+        </ul>
     </body>
 </html>
 
