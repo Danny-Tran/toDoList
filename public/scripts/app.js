@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-function handleFormSubmit() {
-  const searchbutton = $('#submitform');
-  searchbutton.on("submit", function(event) {
-      event.preventDefault();
-      let input = $('#textarea').val();
-      let api = `http://www.omdbapi.com/?t=${input}&apikey=d566210c`;
-      fetch(api)
-      .then((resp) => resp.json())
-      .then(function(movie) {
-          $("#movielist").append(`<li>${movie.Title} - ${movie.Type}</li>`)
-      })  
-      .catch(function(err) {
-        alert(err);
-  })
-  }) 
-}
-=======
 
 //   $.ajax({
 //     method: "GET",
@@ -37,7 +19,6 @@ function handleFormSubmit() {
 //   });;
 // });  "restos": (input) => `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`,
 
->>>>>>> master
 
 const APIS = {
   "restos": (input) => `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`,
@@ -93,7 +74,6 @@ function renderItems(items) {
   }
 
 $(document).ready(function(){
-<<<<<<< HEAD
   $('#addToDo').submit(function(event){
     event.preventDefault();
     const txt = $(".textBox").val();
@@ -125,30 +105,13 @@ $(document).ready(function(){
       return $ul;
     }
 
-      // $('.check_button').click(function(){
-    // event.preventDefault();
-    // function loadList(){
-    //   $.ajax({
-    //     method: "GET",
-    //     url: "/list",
-    //   }).done(function(list){
-    //     renderList(list)
-        
-    //   })
-    // }
-  
-    // loadList();
+
 })  
   
   
 // })
 
 
-=======
-
-onFormSubmit();
-})
->>>>>>> master
 
 
 
