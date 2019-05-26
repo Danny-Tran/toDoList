@@ -44,35 +44,25 @@ app.use("/styles", sass({
   outputStyle: 'expanded'
 }));
 
-const db = []
+
 
 app.use(express.static("public"));
 
 // Mount all resource routes
 app.use("/list", usersRoutes(knex));
 
-// Home page
-// app.get("/", (req, res) => {
-//   res.redirect("/");
-// });
+app.post("/update", (req,res) => {
+  const txt = req.body.text;
+  knex('chores')
+  .select('title')
+  .where("title", "ilike", "%" + txt + "%")
+  .then(results => {
+        
+    res.json(results);    
+    })
+})
 
-// app.post("/",(req,res)=>{
-//   // get user input
-//   const title = req.body.text;
 
-  // create a todo item
-//   const newTodo = {
-//     title,
-//     type: "movies",
-//     status: 'active',
-//     createdAt: Date.now()
-//   }
-  
-//   // add to database
-//   db.push(newTodo);
-
-//   res.send(newTodo);
-// })
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

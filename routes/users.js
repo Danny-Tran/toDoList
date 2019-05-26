@@ -5,7 +5,6 @@ const router  = express.Router();
 
 module.exports = (knex) => {
   router.get("/",(req,res) =>{
-      const txt = $_POST['txt']
       knex('chores')
       .select('title')
       .where({ category: 'restaurant' })
@@ -15,6 +14,8 @@ module.exports = (knex) => {
         })
       
   }); 
+
+  
 
   return router;
 }

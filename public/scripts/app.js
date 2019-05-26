@@ -70,47 +70,54 @@ function restoFormSubmit() {
 
 
 $(document).ready(function(){
-  // $('.textBox').keyup(function(){
-  //   const txt = $(this).val();
-  //   if (txt ) {
-      
-  //   }
-  // })
-
-  $('.check_button').click(function(){
+  $('#addToDo').submit(function(event){
     event.preventDefault();
-    function loadList(){
-      $.ajax({
-        method: "GET",
-        url: "/list",
-      }).done(function(list){
-        renderList(list)
-        
-      })
+    const txt = $(".textBox").val();
+    if (!txt ) {
+      return alert("please eneter and item")
     }
-    
+    $.ajax({
+      method: "POST",
+      url: "/update",
+      data: $(this).serialize(),
+    }).done(function(list){
+      renderList(list)
+    })
+  })
     
     const renderList = list =>{
-    console.log(list)
-    $list = createList(list);
-    $('.tab-content #eat').prepend($list);
+      console.log(list)
+      $list = createList(list);
+      $('.tab-content #eat').prepend($list);
     }
   
     const createList = list => {
-    const $ul = $('<ul>');
-    list.forEach(listItem => {
-      const $li = $('<li>');
-      $li.append(listItem.title);
-      $ul.append($li);
-    });
-    return $ul;
+      const $ul = $('<ul>');
+      list.forEach(listItem => {
+        const $li = $('<li>');
+        $li.append(listItem.title);
+        $ul.append($li);
+      });
+      return $ul;
     }
+
+      // $('.check_button').click(function(){
+    // event.preventDefault();
+    // function loadList(){
+    //   $.ajax({
+    //     method: "GET",
+    //     url: "/list",
+    //   }).done(function(list){
+    //     renderList(list)
+        
+    //   })
+    // }
   
-    loadList();
-  })  
+    // loadList();
+})  
   
   
-})
+// })
 
 
 
