@@ -1,0 +1,66 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  font-family: 'raleway', 'sans-serif';
+  height: 100vh;
+}
+
+body .video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url("../images/Notes.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  z-index: 5;
+  background-color: #e7e0d58f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 730px;
+  margin: 0 9vw;
+  padding: 2em;
+}
+
+body .container .welcome {
+  font-size: 2rem;
+}
+
+body .container .formContainer {
+  height: 30vh;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=register.css.map */

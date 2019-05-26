@@ -104,7 +104,15 @@ function renderItems(items) {
   }
 
 $(document).ready(function(){
-onRestoSubmit()
+  
+  $('form#login').on('submit', (function() {
+    console.log("clicked")
+    redirect("index")
+  }));
+  // handleFormSubmit();
+  
+
+
 onFormSubmit();
 })
 
