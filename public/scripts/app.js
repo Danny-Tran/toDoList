@@ -74,6 +74,14 @@ function renderItems(items) {
   }
 
 $(document).ready(function(){
+  
+  $('form#login').on('submit', (function() {
+    console.log("clicked")
+    redirect("index")
+  }));
+  // handleFormSubmit();
+  
+
 
 onFormSubmit();
 })
