@@ -1,4 +1,3 @@
-
 //   $.ajax({
 //     method: "GET",
 //     url: "/api/users"
@@ -20,11 +19,12 @@
 // });  "restos": (input) => `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`,
 
 
+
 const APIS = {
   "restos": (input) => `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=types,name&locationbias=circle:60000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs`,
   "books": (input) => `https://www.googleapis.com/books/v1/volumes?q=${input}&key=AIzaSyDd1bZjix5lQXjGFAZ8x67mblYDt7VtxoA`,
   "movies": (input) => `http://www.omdbapi.com/?t=${input}&apikey=d566210c`,
-  "products": (input) => undefined
+  "products": (input) => `https://api.nutritionix.com/v1_1/search/${input}?results=0%3A20&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name&appId=34f1c2e9&appKey=9bd833c435be73e49737f80d8e005ab6`
 }
 
 //API Call
@@ -41,15 +41,15 @@ function onFormSubmit() {
       .then((resp) => resp.json())
       .then(function(data) {
         if(apiChoice === 'movies') {
-          return $("#watch-items").append(`<li>${data.Title} - ${data.Type}</li>`)
+          return $("#watch-items").append(`<li>${data.Title}</li>`)
         }
 
         if (apiChoice === 'books') {
-          return $("#read-items").append(`<li>${data.items[0].volumeInfo.title} - ${data.items[0].volumeInfo.printType}</li>`)
+          return $("#read-items").append(`<li>${data.items[0].volumeInfo.title}</li>`)
         }
 
-        if (apiChoice === 'restos') {
-          return $("#movielist").append(`<li>${data.candidates[0].name}</li>`)
+        if (apiChoice === 'products') {
+          return $("#buy-items").append(`<li>${data.hits[19].fields.item_name}</li>`)
         }
       })
       .catch(function(err) {
@@ -57,6 +57,20 @@ function onFormSubmit() {
       })  
   })
 }
+
+// function onRestoSubmit() {
+//   const form = $('#addToDo');
+//     form.on("submit", function(event) {
+//     event.preventDefault();
+//   const restoObj = restaurant
+//   const restoInput = $('#textarea').val()
+//   for (key in restoObj) {
+//     if (restoInput === key) {
+//       console.log(restaurant[key]);
+//     }
+//   }
+// })
+//   }
 
 function renderItems(items) {
     $("#watch-items").empty();
@@ -106,18 +120,17 @@ $(document).ready(function(){
     }
 
 
-})  
-  
-  
-// })
-  
-  $('form#login').on('submit', (function() {
-    console.log("clicked")
-    redirect("index")
-  }));
-  // handleFormSubmit();
-  
-
+    
+    
+    // })
+    
+    $('form#login').on('submit', (function() {
+      console.log("clicked")
+      redirect("index")
+    }));
+    // handleFormSubmit();
+    onFormSubmit();
+})
 
 
 
@@ -155,9 +168,8 @@ $(document).ready(function(){
 
 
 
-// Google places
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@47.6918452,-122.2226413&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs
-
+// GOOGLE API WORKS /// MAKE DATABASE OF 100 PLACES
+// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=cactus&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:100000@51.0486,-114.0708&key=AIzaSyCqtmvXdJHk5KljegWg80BJ3S5Fx0NknKs
 
 //Yelp API
 // SAkDMYC750wPdnzXMGp410qhCIg4K3FLQMa8g_QpnsPo1i33IAOm4JUCXoxvp0ihDQ94kDGYpOBtLHga98liNiZ1sMKPiXFU-6ndPZOF0OfD0La7m2DgbiB0bYvoXHYx
@@ -168,3 +180,12 @@ $(document).ready(function(){
 // en_CA
 
 // Bearer SAkDMYC750wPdnzXMGp410qhCIg4K3FLQMa8g_QpnsPo1i33IAOm4JUCXoxvp0ihDQ94kDGYpOBtLHga98liNiZ1sMKPiXFU-6ndPZOF0OfD0La7m2DgbiB0bYvoXHYxapi.yelp.com/v3/businesses/search?term=delis&latitude=51.0486&longitude=-114.0708
+
+
+// NutritionIX AppID: 34f1c2e9
+
+// Application KEY: 9bd833c435be73e49737f80d8e005ab6
+// https://trackapi.nutritionix.com/v2/search/item
+                                  // /v2/search/instant
+
+                                  // https://api.nutritionix.com/v1_1/search/mcdonalds?results=0:20&fields=item_name,nf_calories&appId=34f1c2e9&appKey=9bd833c435be73e49737f80d8e005ab6
