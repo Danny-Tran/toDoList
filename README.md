@@ -28,7 +28,7 @@ The place to store your recommomendations and check them out later!
 3. Visit localhost 8080
 
 
-## How to use it
+## How to use it:
 
 Once you're logged in, you will see a window to input your item in your todo list. Just select your category and type in whatever you want. 
 
