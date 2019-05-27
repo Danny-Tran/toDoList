@@ -25,3 +25,9 @@ Once you're logged in, you will see a window to input your item in your todo lis
 Once  you have items in your todo list, you'll see them below already categorized! 
 
 Screenshots:
+![Once you're logged in you have access to the window where you have to CheckIt](https://github.com/Danny-Tran/toDoList/blob/frontEnd/public/images/homepage.png?raw=true)
+
+![Easily add an item to your to do list and see it appear under the correct tab](https://github.com/Danny-Tran/toDoList/blob/frontEnd/public/images/addingtomovies.png?raw=true)
+
+## the nitty gritty
+We have connected a few APIs to the input  and are able to place each of the categories with the dropdown button. 
