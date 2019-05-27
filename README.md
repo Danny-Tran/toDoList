@@ -13,6 +13,7 @@ The place to store your recommomendations and check them out later!
 body parser, dotenv, ejs, express, knex, knex-logger,morgan, sass, & pg.
 
 ## Getting Started
+
 1. Install the dependancies with ```npm install```
 2. run the server ```npm start```
 3. Visit localhost 8080
@@ -24,10 +25,15 @@ Once you're logged in, you will see a window to input your item in your todo lis
 
 Once  you have items in your todo list, you'll see them below already categorized! 
 
-Screenshots:
+## Screenshots:
 ![Once you're logged in you have access to the window where you have to CheckIt](https://github.com/Danny-Tran/toDoList/blob/frontEnd/public/images/homepage.png?raw=true)
 
 ![Easily add an item to your to do list and see it appear under the correct tab](https://github.com/Danny-Tran/toDoList/blob/frontEnd/public/images/addingtomovies.png?raw=true)
 
-## the nitty gritty
-We have connected a few APIs to the input  and are able to place each of the categories with the dropdown button. 
+## the nitty gritty ...
+
+We have set up API GET requests fetching from 3 different sources making our database to search through endless! These are integrated into HTML with jQuery and populated into the provided categories. 
+
+Once you've completed an item from your CheckIts, click and and it will get crossed out. This is handy incase you want to CheckOut something again.
+
+

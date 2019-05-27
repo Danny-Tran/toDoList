@@ -52,6 +52,13 @@ function renderItems(items) {
       }
   }
 
+function strikeThrough() {
+  $(".tab-content").on("click", "li", function(){
+    $(this).wrap("<strike>");
+
+  });
+  
+}
 
 $(document).ready(function(){
   $('#addToDo').submit(function(event){
@@ -91,6 +98,7 @@ $(document).ready(function(){
     }));
 
     onFormSubmit();
-
-
+    strikeThrough();
+    
 })
+  
