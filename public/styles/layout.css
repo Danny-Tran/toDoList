@@ -33,7 +33,8 @@ body main#page {
   display: -ms-flexbox;
   display: flex;
   padding: 1em 3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-
 /*# sourceMappingURL=layout.css.map */
-

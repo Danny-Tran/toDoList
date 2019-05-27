@@ -1,29 +1,27 @@
-# Node Skeleton
+# Check It
+The place to store your recommomendations and check them out later!
 
-## Project Setup
+## User Stories
 
-1. Create your own empty repo on GitHub
-2. Clone this repository (do not fork)
-  - Suggestion: When cloning, specify a different folder name that is relevant to your project
-3. Remove the git remote: `git remote rm origin`
-4. Add a remote for your origin: `git remote add origin <your github repo URL>`
-5. Push to the new origin: `git push -u origin master`
-6. Verify that the skeleton code now shows up in your repo on GitHub
+1. After running into my friend the other day, he recommended that I CheckOut this awesome place downtown for my next date night. A couple weeks went by and I couldn't for the life of me remember where he suggested. Another disappointing date night at Boston Pizza. If only there was an app to store my restaurant recs!
+2. After finding a piece of paper in my lint catcher, I need a place to store my jotted down reminders. It'd be awesome if it could categorize it for me so I know what everything means.
+3. As a user I want a place to quickly jot down something and it puts it into a category for me. This will help me remember all the recommendations I get and jog my memory when I'm ready to check it out later!
 
-## Getting Started
-
-1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
-2. Update the .env file with your correct local information
-3. Install dependencies: `npm i`
-4. Fix to binaries for sass: `npm rebuild node-sass`
-5. Run migrations: `npm run knex migrate:latest`
-  - Check the migrations folder to see what gets created in the DB
-6. Run the seed: `npm run knex seed:run`
-  - Check the seeds file to see what gets seeded in the DB
-7. Run the server: `npm run local`
-8. Visit `http://localhost:8080/`
 
 ## Dependencies
 
-- Node 5.10.x or above
-- NPM 3.8.x or above
+body parser, dotenv, ejs, express, knex, knex-logger,morgan, sass, & pg.
+
+## Getting Started
+1. Install the dependancies with ```npm install```
+2. run the server ```npm start```
+3. Visit localhost 8080
+
+
+## How to use it
+
+Once you're logged in, you will see a window to input your item in your todo list. Just select your category and type in whatever you want. 
+
+Once  you have items in your todo list, you'll see them below already categorized! 
+
+Screenshots:
