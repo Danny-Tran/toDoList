@@ -52,13 +52,14 @@ function renderItems(items) {
       }
   }
 
+
 $(document).ready(function(){
   $('#addToDo').submit(function(event){
     event.preventDefault();
     const txt = $("#textarea").val();
     if (!txt ) {
       return alert("please enter an item")
-    }
+    } 
     $.ajax({
       method: "POST",
       url: "/update",
@@ -66,6 +67,7 @@ $(document).ready(function(){
     }).done(function(list){
       renderList(list)
     })
+    $('#textarea').val('')
   })
     
     const renderList = list =>{
@@ -85,11 +87,10 @@ $(document).ready(function(){
     }
     
     $('form#login').on('submit', (function() {
-      console.log("clicked")
       redirect("index")
     }));
 
     onFormSubmit();
 
-    
+
 })
